@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles_src/otherPagesStyle.css">
+		<link rel="shortcut icon" href="https://geekbrains.ru/favicon-16x16.png">
+		<title>Homework 2</title>
+	</head>
+	<body>
+		<div class="h1_main">
+			<p><strong>Homework 2</strong></p>
+			<div class="h1_submain">
+				<span>Student: Goncharenko Aleksey</span>
+			</div>
+		</div>			
+		<script type="text/javascript">
+			// task1
+			function getDeposit(){
+				var deposite, percent, year;			
+				do{
+					deposite = parseInt(prompt("Введите сумму вклада в рублях:", 100000));
+				}while(isNaN(deposite) || deposite <= 0);
+				
+				do{
+					percent = parseFloat(prompt("Введите процент по вкладу:", 1.55)).toFixed(1);
+				}while(isNaN(percent) || percent <= 0);
+				
+				do{
+					year = parseInt(prompt("Введите срок вклада:", 5));
+				}while(isNaN(year) || year <= 0);
+				
+				for(var i = 1; i <= year; i++){ 
+					deposite = deposite + (deposite/100)*percent; // формула подсчёта депозита
+					document.write("<br>Сумма за " + i + "-й" + " год " + deposite.toFixed(2)); // печатаем в во фрейм клиентской области
+				}
+				document.write("<br><strong>Нажмите F5, чтобы вернуться к предыдущему окну</strong>");
+			}
+			// task2
+			function guessMagicValue(){
+				var magicValue = parseInt(Math.random()*100);
+				var userAnswer = 0;
+				var numberOfTries = +prompt("Введите число попыток", 5);
+				var playerNumber = 1;
+				
+				while(numberOfTries > 0){
+					userAnswer = prompt("Введите число" + "\nХодит игрок " + playerNumber + "\nДля выхода нажмите Q" + "\nОсталось попыток " + numberOfTries);
+					if(userAnswer.toUpperCase() == "Q"){
+						document.write("<br>Игрок " + playerNumber + " прервал игру!");
+						break;
+					}
+					if( magicValue == +userAnswer){
+						document.write("<br>Победил игрок " + playerNumber + "<br>Поздравляю!");
+						break;
+					}else if(+userAnswer > magicValue){
+						alert("Ваше число больше загаданного");
+					}else if(+userAnswer < magicValue){
+						alert("Ваше число меньше загаданного");
+					}
+					if(playerNumber == 1)
+						playerNumber = 2;
+					else
+						playerNumber = 1;
+					numberOfTries--;
+				}
+				
+				if(numberOfTries == 0)
+					document.write("<br>К сожалению Вам не удалось угадать загаданное число <strong>" + magicValue + "</strong>. Попробуйте ещё раз =)");
+				document.write("<br><strong>Нажмите F5, чтобы вернуться к предыдущему окну</strong>");
+			}			
+		</script>	
+		<div class="style_nameExercise">
+			<span>1. Программа расчета величины депозита на каждый год в течении 5 лет.</span>
+			<button  type="button" onclick="getDeposit();" >Расчитать</button>
+		</div>
+		<div class="style_nameExercise">
+			<span>2. Программа "Угадайте загаданное число [0..100]"</span>
+			<button  type="button" onclick="guessMagicValue();" >Играть</button>
+		</div>
+		<div class="footer">
+			<span><br>&copy Goncharenko Aleksey</span>
+			<span><br>&copy GeekBrains</span>
+		</div>
+	</body>
+</html>

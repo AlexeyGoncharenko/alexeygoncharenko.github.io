@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=UTF-8">
+	<title>Homework 1</title>
+	<link rel="stylesheet" href="styles_src/otherPagesStyle.css" type="text/css">
+	<link rel="shortcut icon" href="https://geekbrains.ru/favicon-16x16.png">
+</head>
+<body>
+	<div class="h1_main">
+		<p><strong>Homework 1</strong></p>
+		<div class="h1_submain">
+			<span>Student: Goncharenko Aleksey</span>
+		</div>
+	</div>	
+	<script>
+	    // Задание 1
+		function ATM(){
+			var currencyER_DollarUSA = (65.8978583).toFixed(2);
+			var currencyER_Euro = (72.4843493).toFixed(2);
+			var exchangeResult = 0.0;
+			var amountMoneyRUB = 0;
+			
+			do{
+				amountMoneyRUB = parseInt(prompt("Введите сумму в рублях:", 100));
+			}while(isNaN(amountMoneyRUB) || amountMoneyRUB <= 0);
+			
+			var answer = prompt("Выберите валюту: d - $, e - €", "d").toLowerCase();
+			if(answer == 'd'){
+				exchangeResult = (amountMoneyRUB/currencyER_DollarUSA).toFixed(2);
+				alert(amountMoneyRUB + " руб. = " + exchangeResult + "$");	
+			}else if(answer == 'e'){
+				exchangeResult = (amountMoneyRUB/currencyER_Euro).toFixed(2);
+				alert(amountMoneyRUB + " руб. = " + exchangeResult + "€");
+			}else
+				alert("Некорректный ввод данных!");
+		}
+		
+		// Задание 2
+		function takeMath(){
+			var countRightUserAnswers = 0;
+			// генерируем случайные числа от 1..10
+			var a = parseInt(Math.random()*10 + 1); 
+			var b = parseInt(Math.random()*10 + 1);
+
+			// testParam - хранит результат вычисления выражений, который необходимо угадать	
+			var testParam = parseInt((a * b) / 2).toFixed(1);
+			var userAnswer = parseInt(prompt("Чему равно выражение(вычисления с вещ.числами делайте округляя до одного знака после запятой)\n" + a + "*" + b + "/" + "2" + " = ?")).toFixed(1);
+			if(userAnswer == testParam){
+				++countRightUserAnswers;
+				alert("Поздравляем, Вы угадали! Игра окончена!" + "\n" + "Число побед: " + countRightUserAnswers);
+			}else{
+				alert("С первого раза не получилось, тогда продолжаем игру");
+				testParam = parseInt((a - b) + (a / b)).toFixed(1);
+				userAnswer = parseInt(prompt("Чему равно выражение(вычисления с вещ.числами делайте округляя до одного знака после запятой)\n" + "(" + a + "-" + b + ")" + "+" + "(" + a + "/" + b + ")" + " = ?")).toFixed(1);
+				if(userAnswer == testParam){
+					++countRightUserAnswers;
+					alert("Поздравляем, Вы угадали!");
+					testParam = parseInt((a / b) * a).toFixed(1);
+					userAnswer = parseInt(prompt("Чему равно выражение(вычисления с вещ.числами делайте округляя до одного знака после запятой)\n" + "(" + a + "/" + b + ")" + "*" + a + " = ?")).toFixed(1);
+					if(userAnswer == testParam){
+						++countRightUserAnswers;
+						alert("Поздравляем, Вы угадали!");
+						testParam = parseInt(a + b - a).toFixed(1);
+						userAnswer = parseInt(prompt("Чему равно выражение(вычисления с вещ.числами делайте округляя до одного знака после запятой)\n" + a + "+" + b + "-" + a + " = ?")).toFixed(1);
+						if(userAnswer == testParam){
+							++countRightUserAnswers;
+							alert("Поздравляем, Вы угадали!" + "\n" + "Игра окончена!" + "\n" + "Число побед: " + countRightUserAnswers);
+						}else{
+							alert("Вы не угадали. Игра окончена!" + "\n" + "Число побед: " + countRightUserAnswers);
+						}	
+					}else{
+						alert("Вы не угадали. Игра окончена!" + "\n" + "Число побед: " + countRightUserAnswers);
+					}
+				}else{
+					alert("Вы не угадали. Игра окончена!" + "\n" + "Число побед: " + countRightUserAnswers);
+				}
+			}
+		}	
+	</script>
+	<div class="style_nameExercise">
+		<span>1. Программа конверт валют: <em>Rub-> $, €</em></span>
+		<button type="button" onclick="ATM();">Расчитать</button>
+	</div>	
+	<div class="style_nameExercise">
+		<span>2. Программа загадывания арифметических задач</span>
+		<button type="button" onclick="takeMath();">Играть</button>
+	</div>
+	<div class="footer">
+		<span><br>&copy Goncharenko Aleksey</span>
+		<span><br>&copy GeekBrains</span>
+	</div>
+</body>
+</html>

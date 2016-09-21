@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Classwork 3</title>
+		<link rel="stylesheet" type="text/css" href="styles_src/otherPagesStyle.css">
+		<link rel="shortcut icon" href="https://geekbrains.ru/favicon-16x16.png">
+		<script type="text/javascript">				
+			function max(a,b,id){
+				var max = a;
+				if(b > a) max = b;
+				var htlmElement = document.getElementById(id);
+				htlmElement.innerHTML = "Ответ: " + max;
+			}
+			
+			function sum(x,y,z,id){
+				var result = x+y+z;
+				var htlmElement = document.getElementById(id);
+				htlmElement.innerHTML = "Ответ: " + result;
+			}
+
+			function checkInputData(valueId,id){
+				var value;
+				if(document.getElementById(valueId).value == "Например: 5"){
+					value = 5;
+					var htlmElement = document.getElementById(id);
+					htlmElement.innerHTML = "Ответ: " + factorial(value);
+				}else{
+					value = parseInt(document.getElementById(valueId).value);
+					if(value < 0 || isNaN(value))
+						alert("Вы ввели некорректные данные. Повторите ввод!");
+					else {
+						var htlmElement = document.getElementById(id);
+						htlmElement.innerHTML = "Ответ: " + factorial(value);
+					}
+				}
+			}
+
+			// recursion variant to compute factorial
+			function factorial(value){
+				if(value == 0 || value == 1)
+				  return 1;
+				else
+				  return factorial(value - 1)*value;
+			}
+
+			function askTheQuestion(question, answer){
+				var userAnswer = prompt("Загадка: " + question);
+				if(userAnswer.toLowerCase() == answer.toLowerCase()){
+					alert("Вы угадали");
+					return 1;
+				}
+				else{
+					alert("Вы не угадали");
+					return 0;
+				}
+			}
+
+			function playToPuzzle(){
+				var questions = "Зимой и летом одним цветом, ёлка, Весит груша нельзя скушать, лампочка"; // строка состоящая из загадок и ответов на них.
+				var questionsArray = questions.split(", "); // массив сформированный из строки questions
+				var size = questionsArray.length;
+				var countRightAnswers = 0;
+				for(var i = 0; i < size; i=i+2 ){
+					countRightAnswers += askTheQuestion(questionsArray[i], questionsArray[i+1]);
+				}
+				alert("Количество разгаданных загадок: " + countRightAnswers);
+			}		
+		</script>
+	</head>
+	<body>
+		<div class="h1_main">
+			<p><strong>Classwork 3</strong></p>
+			<p>*Работа с функциями в JavaScript</p>
+			<div class="h1_submain">
+				<span>Student: Goncharenko Aleksey</span>
+			</div>
+		</div>
+		<div class="style_nameExercise">
+			<span>Определить максимальное число<br></span>
+			<span>A <input type="text" id="valueA" value="9"><br></span>
+			<span>B <input type="text" id="valueB" value="25"><br></span>
+			<span class="answer" id="answerFunction_Max">Ответ ...</span>
+			<button type="button" onclick="max(parseInt(document.getElementById('valueA').value), parseInt(document.getElementById('valueB').value), 'answerFunction_Max');">Выполнить!</button>
+		</div>
+		<div class="style_nameExercise">
+			<span>Определить сумму чисел<br></span>
+			<span>X <input type="text" id="valueX" value="5"><br></span>
+			<span>Y <input type="text" id="valueY" value="3"><br></span>
+			<span>Z <input type="text" id="valueZ" value="11"><br></span>
+			<span class="answer" id="answerFunction_Sum">Ответ ...</span>
+			<button type="button" onclick="sum(parseInt(document.getElementById('valueX').value), parseInt(document.getElementById('valueY').value), parseInt(document.getElementById('valueZ').value), 'answerFunction_Sum');">Выполнить!</button>
+		</div>
+		<div class="style_nameExercise">
+			<span>Считаем факториал(рекурсивный алгоритм)<br></span>
+			<span>Введите чило:<input type="text" id="factorialValue" value="Например: 5"><br></span>
+			<span class="answer" id="answerFunction_Factorial">Ответ: ...</span>
+			<button type="button" onclick="checkInputData('factorialValue', 'answerFunction_Factorial');">Выполнить!</button>
+		</div>
+		<div class="style_nameExercise">
+			<span>Отгадываем загадки</span>
+			<button type="button" onclick="playToPuzzle();">Играть...</button>
+		</div>
+		<div class="footer">
+			<span><br>&copy Goncharenko Aleksey</span>
+			<span><br>&copy GeekBrains</span>
+		</div>
+	</body>
+</html>

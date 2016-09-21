@@ -1,0 +1,76 @@
+body{
+	font-family: calibri;
+	background: url("../img_src/background1.jpg") no-repeat;
+	background-size: cover;
+}
+
+.h1_main{
+	font-size: 30px;
+	color: #ffffff;
+	background-color: #5DA423;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 11px #ccc;
+	font-family: calibri, Arial sans-serif;
+	text-shadow: 2px 2px 0px black;
+	margin-bottom: 55px;
+}
+.h1_submain{
+	font-size: 19px;
+	font-weight: bold;
+	color: #C0C0C0;
+	font-family: calibri;
+	text-shadow: 1px 1px 0px #ffffff;
+	background-color: #FFEB3B;
+	border-radius: 5px;
+	box-shadow: 0px 0px 15px #ccc;
+	position: relative;
+	float: right;
+	padding: 9px;
+}
+
+.style_nameExercise{
+	color: #000000;
+	background-color: #F2F2F2;
+	font-size: 19px;
+	border-left: 3px solid #2BA6CB;
+	border-radius: 5px;		
+	text-align: left;
+	padding: 20px;
+	padding-left: 55px;
+	width: 700px;
+	margin-bottom: 20px;
+	line-height: 1.4;
+}
+
+.style_nameExercise  .answer{
+	color: #C60F14;
+	text-align: left;
+	//margin-left: -39px;
+}
+
+.style_nameExercise button{
+	float:right;
+}
+
+.footer{
+	text-align: center;
+	font-family: calibri, Arial;
+	font-size: 11px;
+	float: center;
+	text-align: center;
+	margin-top: 25%;
+	line-height: 1;
+}
+button{
+	//border: 1px solid #C0C0C0;
+	border-bottom: #00A0D0;
+	background-color: #2BA6CB;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 5px;
+	font-style: calibri;
+	box-shadow: 0px 0px 15px #C0C0C0;
+	border-radius: 5px;
+	
+}
