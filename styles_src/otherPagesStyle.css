@@ -50,6 +50,15 @@ body{
 }
 
 .style_nameExercise button{
+	//border: 1px solid #C0C0C0;
+	border-bottom: #00A0D0;
+	background-color: #2BA6CB;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 5px;
+	font-style: calibri;
+	box-shadow: 0px 0px 15px #C0C0C0;
+	border-radius: 5px;
 	float:right;
 }
 
@@ -62,7 +71,8 @@ body{
 	margin-top: 25%;
 	line-height: 1;
 }
-button{
+
+.style_nameExercise .submitButton{
 	//border: 1px solid #C0C0C0;
 	border-bottom: #00A0D0;
 	background-color: #2BA6CB;
@@ -72,5 +82,5 @@ button{
 	font-style: calibri;
 	box-shadow: 0px 0px 15px #C0C0C0;
 	border-radius: 5px;
-	
+	float:right;
 }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Classwork 4</title>
+		<link rel="stylesheet" type="text/css" href="styles_src/otherPagesStyle.css">
+		<link rel="shortcut icon" href="https://geekbrains.ru/favicon-16x16.png">
+	</head>
+	<body>
+		<div class="h1_main">
+			<p><strong>Classwork 4</strong></p>
+			<p>*Работа с серверным языком веб-программирования <em>PHP</em></p>
+			<div class="h1_submain">
+				<span>Student: Goncharenko Aleksey</span>
+			</div>
+		</div>
+		<form class="style_nameExercise" action="puzzle.php" method="GET"> <!-- для тестирования на локальной машине, файл puzzle.php расположить в DocumentRoot  & action="http://localhost/puzzle.php" -->
+			<p>Зимой и летом одним цветом?</p>
+			<input type="text" name="userAnswer1">
+			<p>Весит груша нельзя скушать?</p>
+			<input type="text" name="userAnswer2">
+			<input class="submitButton" type="submit" value="Проверка!">
+		</form>
+		<div class="footer">
+			<span><br>&copy Goncharenko Aleksey</span>
+			<span><br>&copy GeekBrains</span>
+		</div>
+	</body>
+</html>
