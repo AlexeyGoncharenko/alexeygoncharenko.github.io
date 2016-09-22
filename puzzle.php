@@ -19,14 +19,14 @@
 				$rightAnswer1 =  'ёлка';
 				$rightAnswer2 = 'лампочка';
 				$countRightUserAnswers = 0;
-				if($rightAnswer1 == $_POST['userAnswer1']){
+				if($rightAnswer1 == $_GET['userAnswer1']){
 					echo "Первая загадка разгадана";
 					$countRightUserAnswers += 1;
 				}else{
 					echo "Первая загадка не разгадана";
 				}
 				echo "<br>";
-				if($rightAnswer2 == $_POST['userAnswer2']){
+				if($rightAnswer2 == $_GET['userAnswer2']){
 					echo "Вторая загадка разгадана";
 					$countRightUserAnswers += 1;
 				}else{
