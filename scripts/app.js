@@ -1,6 +1,6 @@
 $(document).ready(function(){ 
     let last3Images = $('main .blogContent a:nth-last-child(-n+3)');
-    let moreImagesBtn = $('main .moreImages');
+    let moreImagesBtn = $('main .moreImagesBtn');
     let imageVisible = false;
 
     moreImagesBtn.on('click', function(){
