@@ -176,7 +176,7 @@ main .blogContent .moreImagesBtn{
 }
 
 main .box-text {
-	width: 700px auto;
+	width: 700px;
 	font-size: 100%;
 	line-height: 1.5;
 	background-color: #F7F4DA;
@@ -202,7 +202,7 @@ main .details{
 	}
 }
 
-main .card{
+main .mainContent .card{
     background-color: white;
     height: 450px;
 	width: 310px;
@@ -216,14 +216,14 @@ main .card{
 	box-shadow: 0 0 20px 10px rgba(233, 144, 7, 0.7);
 }
 
-main .info{
+main .mainContent .card .info{
 	height: 100%;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 }
 
-main .name{
+main .mainContent .card .info .name{
 	font-size: 25px;
 	font-family: 'Raleway', sans-serif;
 	color: #f79f08;
@@ -233,7 +233,7 @@ main .name{
 	font-weight: 600;
 }
 
-main .profession{
+main .mainContent .card .info .profession{
 	font-size: 19px;
 	font-family: 'Work Sans', sans-serif;
 	color: #555555;
@@ -241,7 +241,7 @@ main .profession{
 	top: 140px;
 }
 
-main .divider{
+main .mainContent .card .info .divider{
 	background-color: #949594;
 	height: 1.5px;
 	width: 55px;
@@ -249,7 +249,7 @@ main .divider{
 	top: 190px;
 }
 
-main .bio{
+main .mainContent .card .info .bio{
 	color: #949594;
 	font-family: 'Work Sans', sans-serif;
 	font-size: 18px;
@@ -259,7 +259,7 @@ main .bio{
 	position: absolute;
 }
 
-main .contactMeBtn{
+main .mainContent .card .info .contactMeBtn{
 	background-color: #f79f08;
 	border: none;
 	font-family: 'Work Sans', sans-serif;
@@ -270,19 +270,19 @@ main .contactMeBtn{
 	position: absolute;
 } 
 
-main .photo{
+main .mainContent .card .photo{
+	height: 100%;
+	width: 100%;
 	background: url(../images/ProfilePicture/ProfilePicture1.jpg);
 	position: absolute;
-	height: 100% ;
-	width: 100%;
 	bottom: 0;
 	background-size: 100% 100%;
 	border-radius: 8px;
 	transition: 1s; 
 } 
 
-main .card:hover .photo{
-	transform: scale(0.5, 0.35), translateY(-650px);
+main .mainContent .card:hover .photo{
+	transform: scale(0.5, 0.35) translateY(-650px);
 	background-size: 100% 150%;
 	background-position: 0 -25px;
 	border-radius: 50%;
