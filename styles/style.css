@@ -213,7 +213,7 @@ main .mainContent .card{
 	left: 0;
 	right: 0;
 	border-radius: 8px;
-	box-shadow: 0 0 20px 10px rgba(233, 144, 7, 0.7);
+	box-shadow: 0px 0px 11px #adaaa7;
 }
 
 main .mainContent .card .info{
