@@ -5,8 +5,8 @@ html, body{
 } 
 
 body{
-	background: #9969e93b;
 	font-family: 'Comfortaa', cursive;
+	background: #9969e93b;
 	margin: 5px;	
 	color: #4d4d4d;
 	display: flex;
