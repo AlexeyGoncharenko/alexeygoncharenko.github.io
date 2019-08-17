@@ -177,16 +177,13 @@ main .blogContent .moreImagesBtn{
 
 main .box-text {
 	width: 700px;
-	font-size: 100%;
+	font-size: 17px;
 	line-height: 1.5;
 	background-color: #F7F4DA;
 	border-left: 9px solid #ffac00;
 	box-shadow: 0px 0px 11px #adaaa7;
-	border-radius: 7px;
-	padding-left: 21px;
-	padding-right: 21px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	border-radius: 8px;
+	padding: 18px;
 	margin: 25px;
 }
 
@@ -202,92 +199,114 @@ main .details{
 	}
 }
 
-main .mainContent .card{
-    background-color: white;
-    height: 450px;
-	width: 310px;
-	position: relative;
-	margin: auto;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	border-radius: 8px;
+main .mainContent .card-container{
+    background-color: #fff;
+    height: 430px;
+	width: 300px;
+	border-radius: 5%;
 	box-shadow: 0px 0px 11px #adaaa7;
+	overflow: hidden;
+	display: inline-block;
+	margin: 25px;
 }
 
-main .mainContent .card .info{
+main .mainContent .card-container .upper-container{
+	height: 100px;
+	background: #ffac00;
+}
+
+main .mainContent .card-container .lower-container{
+	height: 280px;
+	background: white;
+	padding: 20px;
+	padding-top: 40px;
+	text-align: center;
+}
+
+main .mainContent .card-container .upper-container .image-container{
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	/* padding: 5px;
+	background: #ffe2b1; */
+	background-size: 100% 100%;
+	position: relative;
+	top: 55px;
+	left: 100px;
+	transition: all .5s ease-in; 
+} 
+
+main .mainContent .card-container .upper-container .image-container:hover{
+	transform: scale(1.0, 1.0) translate(-100px, -55px);
+	background-size: 100% 100%;
+	height: 430px;
+	width: 300px;
+	border-radius: 5%;
+} 
+
+main .mainContent .card-container .upper-container .image-container img{
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	transition: all .5s ease-in; 
+} 
+
+ main .mainContent .card-container .upper-container .image-container img:hover{
 	height: 100%;
 	width: 100%;
-	display: flex;
-	justify-content: center;
-}
+	border-radius: 5%;
+}  
 
-main .mainContent .card .info .name{
-	font-size: 25px;
+main .mainContent .card-container .lower-container .name{
+	font-size: 20px;
+	font-weight: bold;
 	font-family: 'Raleway', sans-serif;
-	color: #f79f08;
-	position: absolute;
-	top: 100px;
 	letter-spacing: 2px;
-	font-weight: 600;
+	color:#555555;
+	margin: 8px;
 }
 
-main .mainContent .card .info .profession{
+main .mainContent .card-container .lower-container .profession{
 	font-size: 19px;
 	font-family: 'Work Sans', sans-serif;
-	text-align: center;
 	color: #555555;
-	position: absolute;
-	top: 140px;
 }
 
-main .mainContent .card .info .divider{
-	background-color: #949594;
-	height: 1.5px;
-	width: 55px;
-	position: absolute;
-	top: 190px;
+main .mainContent .card-container .lower-container .divider{
+	background-color: #777777;
+	height: 1.4px;
+	width: 225px;
+	/* position: relative;
+	left: 75px; */
+	margin: 15px;
 }
 
-main .mainContent .card .info .bio{
-	color: #949594;
+main .mainContent .card-container .lower-container .bio{
+	color: #777777;
 	font-family: 'Work Sans', sans-serif;
-	font-size: 18px;
-	line-height: 28px;
-	text-align: center;
-	top: 220px;
-	position: absolute;
+	font-size: 17px;
+	line-height: 23px;
+	margin-bottom: 25px;
 }
 
-main .mainContent .card .info .contactMeBtn{
-	background-color: #f79f08;
+main .mainContent .card-container .lower-container .contactMeBtn{
+	background: #ffac00;
 	border: none;
 	font-family: 'Work Sans', sans-serif;
-	font-size: 20px;
+	font-size: 15px;
 	color: white;
+	text-decoration: none;
 	padding: 11px 23px;
-	bottom: 30px;
-	position: absolute;
+	border-radius: 30px;
+	transition: all .5s ease-in;
 } 
 
-main .mainContent .card .photo{
-	height: 100%;
-	width: 100%;
-	background: url(../images/ProfilePicture/ProfilePicture1.jpg);
-	position: absolute;
-	bottom: 0;
-	background-size: 100% 100%;
-	border-radius: 8px;
-	transition: 1s; 
-} 
+main .mainContent .card-container .lower-container .contactMeBtn:hover{
+	background: transparent;
+	color: #ffac00;
+	border: 2px solid #ffac00;
 
-main .mainContent .card:hover .photo{
-	transform: scale(0.5, 0.35) translateY(-650px);
-	background-size: 100% 150%;
-	background-position: 0 -25px;
-	border-radius: 50%;
-}
+} 
 
 @media (max-width: 900px){
 	main .mainContent{
@@ -295,7 +314,7 @@ main .mainContent .card:hover .photo{
 		align-items: center;
 		min-height: 700px;
 	}
-	main .card{
+	main .card-container{
 		max-width: 100%;
 	}
 	main .box-text{
