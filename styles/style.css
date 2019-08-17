@@ -236,6 +236,7 @@ main .mainContent .card .info .name{
 main .mainContent .card .info .profession{
 	font-size: 19px;
 	font-family: 'Work Sans', sans-serif;
+	text-align: center;
 	color: #555555;
 	position: absolute;
 	top: 140px;
