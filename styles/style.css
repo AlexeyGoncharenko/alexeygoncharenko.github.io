@@ -6,8 +6,9 @@ html, body{
 
 body{
 	font-family: 'Comfortaa', cursive;
-	/* background: #fff; */
-	background: url(/../images/background/backgrd-img1.jpg);
+	 /* background: #fff;  */
+	background-image: url(../images/background/backgrd-img1.jpg);
+	background-size: cover;
 	margin: 5px;	
 	color: #4d4d4d;
 	display: flex;
