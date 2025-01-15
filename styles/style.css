@@ -7,7 +7,7 @@ html, body{
 body{
 	font-family: 'Comfortaa', cursive;
 	/* background: #fff; */
-	background-image: url(/alexeygoncharenko.github.io/images/background/backgrd-img1.jpg);
+	background: url(/../images/background/backgrd-img1.jpg);
 	margin: 5px;	
 	color: #4d4d4d;
 	display: flex;
