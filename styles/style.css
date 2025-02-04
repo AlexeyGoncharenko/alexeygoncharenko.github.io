@@ -293,6 +293,8 @@ main .mainContent .card-container .lower-container .divider{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 8px;
+	margin-bottom: 8px;
 	width: 70%;
 }
 
@@ -301,7 +303,7 @@ main .mainContent .card-container .lower-container .bio{
 	font-size: 15px;
 	line-height: 19px;
 	text-align:left;
-	margin-bottom: 5px;
+	margin-bottom: 8px;
 }
 
 main .mainContent .card-container .lower-container p{
